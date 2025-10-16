@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <link rel="stylesheet" href="tetris.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="info-panel">
+            <h1>TETRIS</h1>
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="label">Score:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Level:</span>
+                    <span id="level">1</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Lines:</span>
+                    <span id="lines">0</span>
+                </div>
+            </div>
+            <div class="next-piece-container">
+                <h3>Next Piece</h3>
+                <canvas id="next-piece" width="120" height="120"></canvas>
+            </div>
+            <div class="controls-info">
+                <h3>Controls</h3>
+                <p><strong>←/→</strong> Move</p>
+                <p><strong>↓</strong> Soft Drop</p>
+                <p><strong>↑</strong> Rotate</p>
+                <p><strong>Space</strong> Hard Drop</p>
+                <p><strong>P</strong> Pause</p>
+            </div>
+            <button id="start-btn" class="game-btn">Start Game</button>
+            <button id="pause-btn" class="game-btn" disabled>Pause</button>
+        </div>
+        <div class="game-board">
+            <canvas id="tetris-canvas" width="300" height="600"></canvas>
+            <div id="game-over" class="game-over hidden">
+                <h2>Game Over!</h2>
+                <p>Final Score: <span id="final-score">0</span></p>
+                <button id="restart-btn" class="game-btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html>
